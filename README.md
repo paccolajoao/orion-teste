@@ -17,10 +17,13 @@ docker-compose up -d
 
 3. No container app, rode o composer para instalar as dependências
 ```sh
+docker-compose  exec app bash
+```
+```sh
 composer install
 ```
 
-4. No container app, rode as migrations do projeto
+4. Rode as migrations do projeto
 ```sh
 php artisan migrate
 ```
