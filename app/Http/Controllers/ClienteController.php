@@ -89,8 +89,19 @@ class ClienteController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $cpf_validator = new ValidacaoCPF();
         $cliente = Cliente::find($id);
+        
         if ($cliente) {
+            if ($request->get('cpf') != null) {
+                $resp_cpf_validator = $cpf_validator->checkValidCPF($request->get('cpf'));
+
+                if (!$resp_cpf_validator) {
+                    return response()->json([
+                        "message" => 'CPF digitado inválido'
+                    ], 404);
+                }
+            }
             $cliente->update($request->all());
             return $cliente;
         }
