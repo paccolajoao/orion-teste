@@ -29,11 +29,14 @@ php artisan migrate
 http://localhost:8989/api/
 
 6. Endpoints
-Método Endpoint Descrição
 POST /clienteCadastro
+
 PUT /cliente/{id} 
+
 DELETE /cliente/{id} 
+
 GET /cliente/{id} 
+
 GET /consulta/final-placa/{numero}
 
 Acesse o projeto
