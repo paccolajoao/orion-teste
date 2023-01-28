@@ -29,15 +29,11 @@ php artisan migrate
 http://localhost:8989/api/
 
 6. Endpoints
-POST /clienteCadastro
-
-PUT /cliente/{id} 
-
-DELETE /cliente/{id} 
-
-GET /cliente/{id} 
-
-GET /consulta/final-placa/{numero}
+    POST /clienteCadastro
+    PUT /cliente/{id} 
+    DELETE /cliente/{id} 
+    GET /cliente/{id} 
+    GET /consulta/final-placa/{numero}
 
 Acesse o projeto
 [http://localhost:8989](http://localhost:8989)
